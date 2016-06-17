@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="findAllCategoryAction" class="categoryAction" method="findAllCategory">
+			<result name="success">categoryShow.jsp</result>
+		</action>
+		<action name="findCategoryByParentIdAction" class="categoryAction" method="findCategoryByParentId">
+			<result name="success">categoryShow.jsp</result>
+		</action>
+		<action name="addCategoryAction" class="categoryAction" method="addCategory">
+			<result name="success" type="redirectAction">findAllCategoryAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="updateCategoryAction" class="categoryAction" method="updateCategory">
+			<result name="success" type="redirectAction">findAllCategoryAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="deleteCategoryAction" class="categoryAction" method="deleteCategory">
+			<result name="success" type="redirectAction">findAllCategoryAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findPropToAddProductAction" class="categoryAction" method="findProp">
+			<result name="success">productAdd.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		
+		
+		<action name="addProductAction" class="productAction" method="addProduct">
+			<result name="success" type="redirectAction">findProductAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findProductAction" class="productAction" method="findProduct">
+			<result name="success">productShow.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="deleteProductAction" class="productAction" method="deleteProduct">
+			<result name="success" type="redirectAction">findProductAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findProductDetailAction" class="productAction" method="findProductDetail">
+			<result name="success">productDetailShow.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		
+		
+		<action name="findAllModelAction" class="modelAction" method="findAllModel">
+			<result name="success">/model/modelShow.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="addModelAction" class="modelAction" method="addModel">
+			<result name="success" type="redirectAction">findAllModelAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="updateModelAction" class="modelAction" method="updateModel">
+			<result name="success" type="redirectAction">findAllModelAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findModelEchoAction" class="modelAction" method="findModelEcho">
+			<result name="success">/model/modelUpdate.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="deleteModelAction" class="modelAction" method="deleteModel">
+			<result name="success" type="redirectAction">findAllModelAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="addPropDefineAction" class="modelAction" method="addPropDefine">
+			<result name="success" type="redirectAction">findAllModelAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findPropAction" class="modelAction" method="findProp">
+			<result name="success">/model/propShow.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="deletePropAction" class="modelAction" method="deletePropDefine">
+			<result name="success" type="redirectAction">findAllModelAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findPropEchoAction" class="modelAction" method="findPropEcho">
+			<result name="success">/model/propDefineUpdate.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="updatePropDefineAction" class="modelAction" method="updatePropDefine">
+			<result name="success" type="redirectAction">findAllModelAction</result>
+			<result name="input">error.jsp</result>
+		</action>
+	</package>
+</struts>    
